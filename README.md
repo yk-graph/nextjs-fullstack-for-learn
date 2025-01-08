@@ -8,20 +8,28 @@
 | Github | https://github.com/yk-graph/nextjs-fullstack-for-learn |
 | Deploy | Data                                                   |
 
-| Stack/Lib | Description          |
-| --------- | -------------------- |
-| Nextjs    | version 14 AppRouter |
-| form      | server actions       |
-| DB        | MongoDB              |
-| libs      | mongoose             |
+| Stack  | Description          |
+| ------ | -------------------- |
+| Nextjs | version 14 AppRouter |
+| form   | server actions       |
+| DB     | MongoDB              |
+
+| Lib      | Description                            |
+| -------- | -------------------------------------- |
+| mongoose | https://www.npmjs.com/package/mongoose |
 
 ### Tips \*NextJS
 
-| Index         | AsIs                                                                                                   | ToBe                                                                   | Solution                                                                                                                             |
-| ------------- | ------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| route handler | route ハンドラで記述した処理は静的な要素としてビルドされる<br>\*ビルド時点で取得したデータが表示される | API にリクエストが発生されるたびに動的にデータを取得したい             | [export const dynamic = 'force-dynamic'](https://nextjs.org/docs/14/app/api-reference/file-conventions/route-segment-config#dynamic) |
-| fetch cache   | fetch 関数を使ってデータを取得するとデフォルトではキャッシュを利用する設定になっている                 | キャッシュを利用せず、fetch 関数実行時に返却された値を取得したい       | [fetch(`https://...`, { cache: 'no-store' })](https://nextjs.org/docs/14/app/api-reference/functions/fetch#optionscache)             |
-| cache log     | fetch 関数実行時にキャッシュが利用されているか分からない                                               | キャッシュが利用されている場合ターミナルに `cache: HIT` と表示させたい | [next.config.mjs に設定を記述](https://nextjs.org/docs/app/api-reference/config/next-config-js/logging)                              |
+| Index          | AsIs                                                                                                   | ToBe                                                                   | Solution                                                                                                                             |
+| -------------- | ------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| route handler  | route ハンドラで記述した処理は静的な要素としてビルドされる<br>\*ビルド時点で取得したデータが表示される | API にリクエストが発生されるたびに動的にデータを取得したい             | [export const dynamic = 'force-dynamic'](https://nextjs.org/docs/14/app/api-reference/file-conventions/route-segment-config#dynamic) |
+| fetch cache    | fetch 関数を使ってデータを取得するとデフォルトではキャッシュを利用する設定になっている                 | キャッシュを利用せず、fetch 関数実行時に返却された値を取得したい       | [fetch(`https://...`, { cache: 'no-store' })](https://nextjs.org/docs/14/app/api-reference/functions/fetch#optionscache)             |
+| cache log      | fetch 関数実行時にキャッシュが利用されているか分からない                                               | キャッシュが利用されている場合ターミナルに `cache: HIT` と表示させたい | [next.config.mjs に設定を記述](https://nextjs.org/docs/app/api-reference/config/next-config-js/logging)                              |
+| send form      | client 側からフォームを送信                                                                            | server action を使った form の送信                                     |
+| error handling | api route 側でエラーを定義                                                                             | server component でエラーを受けて error.tsx で表示したい               |
+| api route      | API リクエストの時にパラメータの値を受け取りたい                                                       | ---                                                                    |
+| send form      | ---                                                                                                    | ---                                                                    |
+| send form      | ---                                                                                                    | ---                                                                    |
 
 ### Tips \*MongoDB
 
