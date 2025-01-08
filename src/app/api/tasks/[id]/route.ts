@@ -3,6 +3,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { connectDb } from '@/utils/database'
 import { TaskModel } from '@/models/task'
 
+// Tips: リクエストの動的パラメータを受け取るための記述
 export const GET = async (_: NextRequest, { params }: { params: { id: string } }) => {
   try {
     await connectDb()
