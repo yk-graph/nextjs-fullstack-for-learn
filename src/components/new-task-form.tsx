@@ -6,9 +6,7 @@ import { useFormState, useFormStatus } from 'react-dom'
 import { createTask, FormState } from '@/actions/task'
 
 export const NewTaskForm: FC = () => {
-  const initialState: FormState = {
-    error: '',
-  }
+  const initialState: FormState = { error: '' }
 
   const [state, formAction] = useFormState(createTask, initialState)
 
